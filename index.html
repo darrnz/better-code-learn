@@ -14,51 +14,12 @@
     <option value="big-O-complexity">Big O Complexity</option>
     <option value="DataStructures/LinkedList">Data Structures - Linked List</option>
     <option value="DataStructures/Trees">Data Structures - Trees</option>
-    <!-- Add more options for other subjects here -->
   </select>
 
   <button id="runTestsButton">Run Tests</button>
 
-  <!-- Div to display the test results -->
   <div id="test-results"></div>
 
-  <script type="module">
-    document.getElementById('runTestsButton').addEventListener('click', async function () {
-      const subject = document.getElementById('subjectSelector').value;
-
-      if (!subject) {
-        alert('Please select a subject!');
-        return;
-      }
-
-      const testResultsDiv = document.getElementById('test-results');
-      testResultsDiv.innerHTML = '';  // Clear previous results
-
-      // Dynamically load the exercise and test files for the selected subject
-      try {
-        // Import the test file as a module
-        const { runTests } = await import(`./dist/${subject}/exercises.test.js`);
-        
-        // Run the tests and display the results
-        const results = runTests();
-        displayResults(results);
-      } catch (error) {
-        testResultsDiv.innerHTML = 'Failed to load the test file: ' + error.message;
-      }
-    });
-
-    // Function to display test results
-    function displayResults(results) {
-      const testResultsDiv = document.getElementById('test-results');
-      results.forEach(result => {
-        const resultDiv = document.createElement('div');
-        resultDiv.style.color = result.passed ? 'green' : 'red';
-        resultDiv.innerHTML = result.passed
-          ? `✅ ${result.description}`
-          : `❌ ${result.description} - ${result.error.message}`;
-        testResultsDiv.appendChild(resultDiv);
-      });
-    }
-  </script>
+  <script type="module" src="index.ts"></script>
 </body>
 </html>

@@ -2,14 +2,15 @@
   "name": "my-exercises-repo",
   "version": "1.0.0",
   "scripts": {
-   "compile": "tsc",
+    "compile": "tsc",
     "watch": "tsc --watch",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",
-    "@types/node": "^22.6.1"
+    "@types/node": "^22.6.1",
+    "vite": "^5.4.8"
   },
   "dependencies": {
     "jest": "^29.7.0",
