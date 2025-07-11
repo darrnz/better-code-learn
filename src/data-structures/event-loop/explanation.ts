@@ -18,3 +18,7 @@ export function eventLoopExample() {
 // 3. 'End' is logged next.
 // 4. After the stack is clear, 'Timeout' is logged.
 // The event loop enables JavaScript to handle async tasks efficiently.
+
+// 🌐 Extra Resources
+// 1. Jake Archibald: In the Loop (YouTube) - https://www.youtube.com/watch?v=cCOL7MC4Pl0
+// 2. MDN Web Docs: Event Loop - https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop

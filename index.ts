@@ -1,5 +1,5 @@
+import { run } from "node:test";
 
-import { run } from '@vitest/browser/ui';
 
 document.getElementById('runTestsButton')?.addEventListener('click', async function () {
   const subjectSelector = document.getElementById('subjectSelector') as HTMLSelectElement;

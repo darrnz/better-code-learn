@@ -1,6 +1,21 @@
+
 // Queue Explanation
-// A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle.
-// You add elements at the end and remove them from the front.
+// -----------------
+// What is a Queue?
+// - A queue is a simple data structure that stores items in a First-In-First-Out (FIFO) order.
+// - You add (enqueue) items at the end and remove (dequeue) items from the front.
+// - Think of a queue like a line at a ticket counter: first person in is the first person out.
+
+// Key Points:
+// - FIFO: First item added is the first one removed.
+// - Only the front item is accessible for dequeue/peek operations.
+// - Used for scheduling, buffering, breadth-first search, and more.
+
+// When to Use a Queue:
+// - When you need to process items in the order they arrive (e.g., print jobs, customer service).
+// - When you need to buffer data (e.g., network packets, task queues).
+// - When you need to traverse structures level by level (e.g., BFS in trees/graphs).
+
 // Let's build a simple queue and walk through its main operations step by step.
 
 export class Queue {
@@ -38,16 +53,33 @@ export class Queue {
 }
 
 // Example usage:
+
+
+// Example usage (step-by-step):
+// 1. Create a Queue instance
 const queue = new Queue();
-queue.enqueue(1); // Adds 1
-queue.enqueue(2); // Adds 2
+
+// 2. Add items to the queue
+queue.enqueue(1); // Queue: [1]
+queue.enqueue(2); // Queue: [1, 2]
+
+// 3. Peek at the front item
 console.log(queue.peek()); // Output: 1
-queue.dequeue(); // Removes 1
+
+// 4. Remove the front item
+queue.dequeue(); // Queue: [2]
 console.log(queue.peek()); // Output: 2
 
-// Step-by-step:
-// 1. We create a Queue instance.
-// 2. We enqueue items.
-// 3. We peek at the front item.
-// 4. We dequeue items from the front.
-// Queues are great for scheduling, buffering, and more.
+// 5. Check if the queue is empty
+console.log(queue.isEmpty()); // Output: false
+
+// 6. Get the size of the queue
+console.log(queue.size()); // Output: 1
+
+// 7. Clear the queue
+queue.clear(); // Queue: []
+console.log(queue.isEmpty()); // Output: true
+
+// Summary:
+// - Queues are perfect for managing ordered data with FIFO access.
+// - Use queues for scheduling, buffering, and level-order traversal in algorithms.
