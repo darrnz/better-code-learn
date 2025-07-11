@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "ES6",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["vitest"],
     "outDir": "./dist",
     "rootDir": "./src",  
     "strict": true,
